@@ -1,0 +1,141 @@
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+@import url("https://fonts.gooleapis.com/css?family=Poppins");
+body {
+  background-color: #f7e7ce;
+  font-family: "Poppins", sans-serif;
+}
+/**nav**/
+header {
+  display: flex;
+  flex-direction: row;
+  color: #fffaf0;
+  font-family: "Courier New", Courier, monospace;
+  background-image: url("img/IMG-20240322-WA0000.jpg");
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-left: 15rem;
+}
+.menu a {
+  text-decoration: none;
+  color: #fc46aa;
+  cursor: pointer;
+}
+.menu a:hover {
+  color: #fffaf0;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 15px;
+  margin-left: 28rem;
+}
+.navlink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+.navlink li {
+  list-style: none;
+}
+.navlink a {
+  color: #fcbacb;
+  font-size: 30px;
+  transition: 0.75s ease-in-out;
+}
+.navlink a:hover {
+  color: #f7e7ce;
+  font-size: 15px;
+}
+/** gallery*/
+.container {
+  position: relative;
+  height: 500px;
+  width: 700px;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+.box {
+  width: 440px;
+  height: 440px;
+  box-shadow: 0 0 10px #0000004d;
+  border: 1px soild #bbb;
+  border-radius: 25px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  transition: 800ms ease-in-out;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  left: 1000%;
+}
+.box:nth-of-type(6) {
+  left: 40%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-200px);
+  opacity: 0;
+  z-index: 2;
+}
+.box:nth-of-type(5) {
+  left: 40%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-200px);
+  opacity: 0;
+  z-index: 2;
+}
+.box:nth-of-type(4) {
+  left: 35%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-150px);
+  opacity: 0.25;
+  z-index: 2;
+}
+.box:nth-of-type(3) {
+  left: 30%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-100px);
+  opacity: 0.5;
+  z-index: 5;
+}
+.box:nth-of-type(2) {
+  left: 25%;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-50px);
+  opacity: 0.75;
+  z-index: 10;
+}
+.box:first-of-type {
+  left: 40%;
+  transform: translate(-50%, -50%) rotateY(-10deg);
+  opacity: 0;
+  z-index: 5;
+}
+/* Sub*/
+.sub {
+  color: #b09b8c;
+  font-family: "Times New Roman", Times, serif;
+}
+.category {
+  list-style: none;
+  font-family: "Courier New", Courier, monospace;
+}
+.sub .female a {
+  color: #fc46aa;
+  text-decoration: none;
+}
+.sub .arab a {
+  color: #652a0e;
+  text-decoration: none;
+}
+.sub .male a {
+  color: #0a1172;
+  text-decoration: none;
+}

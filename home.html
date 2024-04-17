@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scents By Lerato</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Scents by Lerato</h1>
+      <div class="menu">
+      <nav>
+        <ul class="navlink">
+          <li>
+            <a href="home.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-solid fa-shopping-bag"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </li>
+          <li>
+            <a href="shop.html">
+              <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      const $container = document.querySelector(".container");
+      setInterval(() => {
+        const $last = $container.firstElementChild;
+        $last.remove();
+        $container.appendChild($last);
+      }, 1000);
+    </script>
+    <div class="container">
+      <div class="box">
+        <img src="img/IMG-20240322-WA0009.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/IMG-20240403-WA0018.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/IMG-20240403-WA0008.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/IMG-20240403-WA0012.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/IMG-20240403-WA0029.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="" alt="" />
+      </div>
+    </div>
+    <section class="sub">
+      <h3>Pick the perfect scent for your perfect mood with our wide range of fragnances.</h3>
+      <ul class="category">
+        <li class="female">
+          <a href="">For the girlies</a>
+        </li>
+        <li class="arab">
+          <a href="">Habiti smell like an Arab</a>
+        </li>
+        <li class="male">
+          <a href="">For the gents</a>
+        </li>
+      </ul>
+    </section>
+  </body>
+  <footer id="footer" style="background-image: url(img/IMG-20240322-WA0000.jpg);">
+    <h1 class="contact" style="color: #f7e7ce;">Contact us</h1>
+    <ol class="info">
+      <li>
+        <a href="whatsapp//send?phone=+27762551430">
+          <i class="fa-solid fa-whatsapp"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fa-solid fa-instagram"></i>
+        </a>
+      </li>
+      <li></li>
+    </ol>
+    <h5 style="color: #f7e7ce; text-align: center;">Created By Thembisile Makamu</h5>
+  </footer>
+</html>
