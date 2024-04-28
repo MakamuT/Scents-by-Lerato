@@ -26,7 +26,7 @@ header {
   cursor: pointer;
 }
 .menu a:hover {
-  color: #fffaf0;
+  color: #d3af37;
 }
 nav {
   display: flex;
@@ -50,7 +50,7 @@ nav {
   transition: 0.75s ease-in-out;
 }
 .navlink a:hover {
-  color: #f7e7ce;
+  color: #d3af37;
   font-size: 15px;
 }
 /** gallery*/
@@ -118,6 +118,49 @@ img {
   opacity: 0;
   z-index: 5;
 }
+/*shop*/
+.gallery {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 500px;
+}
+.items {
+  flex: 1;
+  height: 100%;
+}
+.items:nth-child(1) {
+  background-image: url(img/IMG-20240403-WA0008.jpg);
+}
+.items:nth-child(2) {
+  background-image: url(img/IMG-20240403-WA0024.jpg);
+}
+.items:nth-child(3) {
+  background-image: url(img/IMG-20240403-WA0014.jpg);
+}
+.items:nth-child(4) {
+  background-image: url(img/IMG-20240403-WA0023.jpg);
+}
+.items:nth-child(5) {
+  background-image: url(img/IMG-20240403-WA0022.jpg);
+}
+.items:nth-child(6) {
+  background-image: url(img/IMG-20240403-WA0019.jpg);
+}
+.items:nth-child(7) {
+  background-image: url(img/IMG-20240403-WA0018.jpg);
+}
+.items:nth-child(8) {
+  background-image: url(img/IMG-20240403-WA0028.jpg);
+}
+.items {
+  background-position: center;
+  background-size: cover;
+  transition: flex 0.8s ease;
+}
+.items:hover {
+  flex: 5;
+}
 /* Sub*/
 .sub {
   color: #b09b8c;
@@ -138,4 +181,14 @@ img {
 .sub .male a {
   color: #0a1172;
   text-decoration: none;
+}
+/*Scroll*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fcbacb;
+}
+::-webkit-scrollbar-track {
+  background: linear-gradient(#fffaf0, #b09b8c, #f7e7ce);
 }
