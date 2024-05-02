@@ -33,7 +33,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   height: 15px;
-  margin-left: 28rem;
+  margin-left: 2rem;
 }
 .navlink {
   display: flex;
