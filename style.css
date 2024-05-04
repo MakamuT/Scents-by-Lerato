@@ -11,7 +11,7 @@ header {
   color: #fffaf0;
   font-family: "Courier New", Courier, monospace;
   background-image: url("img/IMG-20240322-WA0000.jpg");
-  background-size: cover;
+  background-size: auto;
 }
 .menu {
   display: flex;
@@ -34,7 +34,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   height: 15px;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .navlink {
   display: flex;
@@ -121,7 +121,6 @@ img {
   z-index: 5;
 }
 /*shop*/
-
 
 /* Sub*/
 .sub {
