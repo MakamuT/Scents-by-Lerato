@@ -11,6 +11,7 @@ header {
   color: #fffaf0;
   font-family: "Courier New", Courier, monospace;
   background-image: url("img/IMG-20240322-WA0000.jpg");
+  background-size: cover;
 }
 .menu {
   display: flex;
@@ -38,15 +39,16 @@ nav {
 .navlink {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 5px;
 }
 .navlink li {
   list-style: none;
 }
 .navlink a {
   color: #fcbacb;
-  font-size: 30px;
+  font-size: 20px;
   transition: 0.75s ease-in-out;
 }
 .navlink a:hover {
@@ -119,48 +121,8 @@ img {
   z-index: 5;
 }
 /*shop*/
-.gallery {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  height: 500px;
-}
-.items {
-  flex: 1;
-  height: 100%;
-}
-.items:nth-child(1) {
-  background-image: url(img/IMG-20240403-WA0008.jpg);
-}
-.items:nth-child(2) {
-  background-image: url(img/IMG-20240403-WA0024.jpg);
-}
-.items:nth-child(3) {
-  background-image: url(img/IMG-20240403-WA0014.jpg);
-}
-.items:nth-child(4) {
-  background-image: url(img/IMG-20240403-WA0023.jpg);
-}
-.items:nth-child(5) {
-  background-image: url(img/IMG-20240403-WA0022.jpg);
-}
-.items:nth-child(6) {
-  background-image: url(img/IMG-20240403-WA0019.jpg);
-}
-.items:nth-child(7) {
-  background-image: url(img/IMG-20240403-WA0018.jpg);
-}
-.items:nth-child(8) {
-  background-image: url(img/IMG-20240403-WA0028.jpg);
-}
-.items {
-  background-position: center;
-  background-size: cover;
-  transition: flex 0.8s ease;
-}
-.items:hover {
-  flex: 5;
-}
+
+
 /* Sub*/
 .sub {
   color: #b09b8c;
