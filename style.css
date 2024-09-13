@@ -4,16 +4,6 @@ body {
   background-color: #f7e7ce;
   font-family: "Poppins", sans-serif;
 }
-/**nav**/
-header {
-  backgound-color: #fffaf0;
-  display: flex;
-  flex-direction: row;
-  color: #d3af37;
-  font-family: "Courier New", Courier, monospace;
-  width: 100%;
-}
-
 .menu {
     display: flex;
     justify-content: space-between;
@@ -24,14 +14,6 @@ header {
 .hamburger {
     display: none; /* Hide on larger screens */
     cursor: pointer;
-}
-
-.menu-toggle {
-    display: none; /* Hide the checkbox */
-}
-
-.nav-menu {
-    display: flex;
 }
 
 .navlink {
@@ -51,37 +33,34 @@ header {
     font-size: 18px;
 }
 
-/* Hidden menu for mobile */
-.nav-menu {
+.nav-hidden {
     display: none;
-    flex-direction: column;
+}
+
+.nav-visible {
+    display: block;
     position: absolute;
-    top: 60px;
-    right: 10px;
+    top: 50px;
+    right: 0;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
 }
 
-.nav-menu ul {
+.nav-visible ul {
     list-style-type: none;
     padding: 0;
 }
 
-.nav-menu li {
+.nav-visible li {
     margin: 10px 0;
 }
 
-.nav-menu a {
+.nav-visible a {
     text-decoration: none;
     color: black;
     font-size: 18px;
-}
-
-/* Checkbox hack for toggling */
-.menu-toggle:checked + .hamburger + .nav-menu {
-    display: flex;
 }
 
 /* Responsive design */
