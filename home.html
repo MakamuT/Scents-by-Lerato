@@ -90,6 +90,19 @@
     </h5>
   </footer>
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+
+            hamburger.addEventListener('click', function() {
+                if (navMenu.classList.contains('nav-hidden')) {
+                    navMenu.classList.remove('nav-hidden');
+                    navMenu.classList.add('nav-visible');
+                } else {
+                    navMenu.classList.remove('nav-visible');
+                    navMenu.classList.add('nav-hidden');
+                }
+            });
     const $container = document.querySelector(".container");
 
     setInterval(() => {
