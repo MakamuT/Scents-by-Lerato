@@ -13,31 +13,86 @@ header {
   font-family: "Courier New", Courier, monospace;
   width: 100%;
 }
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 15px;
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
+
+.hamburger {
+    display: none; /* Hide on larger screens */
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.nav-menu {
+    display: flex;
+}
+
 .navlink {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
 .navlink li {
-  list-style: none;
+    margin: 0 15px;
 }
+
 .navlink a {
-  color: #fcbacb;
-  font-size: 20px;
-  transition: 0.75s ease-in-out;
-  cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
 }
-.navlink a:hover {
-  color: #d3af37;
-  font-size: 15px;
+
+/* Hidden menu for mobile */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Checkbox hack for toggling */
+.menu-toggle:checked + .hamburger + .nav-menu {
+    display: flex;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navlink {
+        display: none; /* Hide desktop nav on small screens */
+    }
 }
 /** gallery*/
 .container {
