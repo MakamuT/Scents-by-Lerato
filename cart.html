@@ -328,67 +328,65 @@
     </h5>
   </footer>
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Add event listener to all trash icons
-    document.querySelectorAll('.fa-trash').forEach(function(icon) {
-      icon.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Find the row containing the clicked trash icon
-        const row = icon.closest('tr');
-        // Remove the row
-        row.remove();
-        updateCartTotal();
-      });
-    });
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to update the subtotal of a row
+    function updateSubtotal(row) {
+        const price = parseFloat(row.children[3].innerText.replace('R', ''));
+        const quantity = parseInt(row.children[4].querySelector('input').value, 10);
+        row.children[5].innerText = `R${(price * quantity).toFixed(2)}`;
+    }
 
-  function updateCartTotal() {
-    const rows = document.querySelectorAll('table tbody tr');
-    let subtotal = 0;
+    // Function to update the cart total
+    function updateCartTotal() {
+        const rows = document.querySelectorAll('table tbody tr');
+        let subtotal = 0;
 
-    rows.forEach(row => {
-      const price = parseFloat(row.children[3].innerText.replace('R', ''));
-      const quantity = parseInt(row.children[4].querySelector('input').value, 10);
-      subtotal += price * quantity;
-    });
+        rows.forEach(row => {
+            const rowSubtotal = parseFloat(row.children[5].innerText.replace('R', ''));
+            subtotal += rowSubtotal;
+        });
 
-    // Update the cart subtotal and total
-    document.querySelector('.total td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
-    document.querySelector('.total tr:last-child td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
-  }
-  // Event listener for quantity change
-      document.querySelectorAll('input[type="number"]').forEach(input => {
+        // Update the cart subtotal and total
+        document.querySelector('.total td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
+        document.querySelector('.total tr:last-child td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
+    }
+
+    // Event listener for quantity change
+    document.querySelectorAll('input[type="number"]').forEach(input => {
         input.addEventListener('change', function() {
-          const row = this.closest('tr');
-          updateSubtotal(row);
-          updateCartTotal();
+            const row = this.closest('tr');
+            updateSubtotal(row);
+            updateCartTotal();
         });
-      });
+    });
+
     // Event listener for trash icon click
-      document.querySelectorAll('.fa-trash').forEach(icon => {
+    document.querySelectorAll('.fa-trash').forEach(icon => {
         icon.addEventListener('click', function(event) {
-          event.preventDefault();
-          const row = icon.closest('tr');
-          row.remove();
-          updateCartTotal();
+            event.preventDefault();
+            const row = icon.closest('tr');
+            row.remove();
+            updateCartTotal();
         });
-      });
+    });
+
     // Event listener for coupon application
-      document.getElementById('applyCoupon').addEventListener('click', function() {
-        const couponCode = document.getElementById('couponCode').value.trim();
+    document.querySelector('.coupon button').addEventListener('click', function() {
+        const couponCode = document.querySelector('.coupon input').value.trim();
         // Dummy coupon logic
         if (couponCode === 'DISCOUNT10') {
-          const discount = 0.10; // 10% discount
-          const subtotal = parseFloat(document.getElementById('cartSubtotal').innerText.replace('R', ''));
-          const discountedTotal = subtotal * (1 - discount);
-          document.getElementById('cartTotal').innerText = `R${discountedTotal.toFixed(2)}`;
+            const discount = 0.10; // 10% discount
+            const subtotal = parseFloat(document.querySelector('.total td:nth-child(2)').innerText.replace('R', ''));
+            const discountedTotal = subtotal * (1 - discount);
+            document.querySelector('.total tr:last-child td:nth-child(2)').innerText = `R${discountedTotal.toFixed(2)}`;
         } else {
-          alert('Invalid coupon code.');
+            alert('Invalid coupon code.');
         }
-      });
+    });
 
-      // Initial update for cart total
-      updateCartTotal();
+    // Initial update for cart total
+    updateCartTotal();
+});
 </script>
 
 </html>
