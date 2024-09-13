@@ -26,22 +26,6 @@ body {
     color: #d3af37;
     font-size: 18px;
 }
-
-
-.nav-visible ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.nav-visible li {
-    margin: 10px 0;
-}
-
-.nav-visible a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-}
 .navlink:hover{
   color: black;
 }
