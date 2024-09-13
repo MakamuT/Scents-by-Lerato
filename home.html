@@ -10,12 +10,6 @@
     <header>
         <h1 class="title">Scents by Lerato</h1>
         <div class="menu">
-            <!-- Hidden checkbox -->
-            <input type="checkbox" id="menuToggle" class="menu-toggle" />
-            <!-- Label for the hamburger icon -->
-            <label for="menuToggle" class="hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </label>
             <nav id="navMenu" class="nav-menu">
                 <ul class="navlink">
                     <li><a href="home.html"><i class="fa-solid fa-house"></i></a></li>
@@ -68,42 +62,7 @@
       </ul>
     </section>
   </body>
-  <footer
-    id="footer"
-    style="background-image: url(img/IMG-20240322-WA0000.jpg)"
-  >
-    <h1 class="contact" style="color: #f7e7ce">Contact us</h1>
-    <ul class="info">
-      <li>
-        <a href="whatsapp//send?phone=+277625 51430">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </li>
-    </ul>
-    <h5 style="color: #f7e7ce; text-align: center">
-      Created By Thembisile Makamu
-    </h5>
-  </footer>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('navMenu');
-
-            hamburger.addEventListener('click', function() {
-                if (navMenu.classList.contains('nav-hidden')) {
-                    navMenu.classList.remove('nav-hidden');
-                    navMenu.classList.add('nav-visible');
-                } else {
-                    navMenu.classList.remove('nav-visible');
-                    navMenu.classList.add('nav-hidden');
-                }
-            });
-      </script>
+ 
   <script>
     const $container = document.querySelector(".container");
 
