@@ -327,4 +327,35 @@
       Created By Thembisile Makamu
     </h5>
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to all trash icons
+    document.querySelectorAll('.fa-trash').forEach(function(icon) {
+      icon.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Find the row containing the clicked trash icon
+        const row = icon.closest('tr');
+        // Remove the row
+        row.remove();
+        updateCartTotal();
+      });
+    });
+  });
+
+  function updateCartTotal() {
+    const rows = document.querySelectorAll('table tbody tr');
+    let subtotal = 0;
+
+    rows.forEach(row => {
+      const price = parseFloat(row.children[3].innerText.replace('R', ''));
+      const quantity = parseInt(row.children[4].querySelector('input').value, 10);
+      subtotal += price * quantity;
+    });
+
+    // Update the cart subtotal and total
+    document.querySelector('.total td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
+    document.querySelector('.total tr:last-child td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
+  }
+</script>
+
 </html>
