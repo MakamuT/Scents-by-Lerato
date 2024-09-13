@@ -123,9 +123,10 @@ img {
 }
 /*contact*/
 .contact{
-  border:1px solid #d3af37;
   color: #652a0e;
   display: flex;
+  flex-direction: column;
+  gap: 5px;
   flex-wrap: wrap;
 }
 .contact a {
@@ -133,6 +134,7 @@ img {
   flex-direction: row;
   gap: 4px;
   color: #d3af37;
+  text-decoration: none;
 }
 
 
