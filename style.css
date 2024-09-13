@@ -121,7 +121,17 @@ img {
   opacity: 0;
   z-index: 5;
 }
-/*shop*/
+/*contact*/
+.contact{
+  border:1px solid #d3af37;
+  color: #652a0e;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact a i{
+  color: #d3af37;
+}
+
 
 /* Sub*/
 .sub {
