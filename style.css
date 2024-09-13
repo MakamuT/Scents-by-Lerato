@@ -42,6 +42,9 @@ body {
     color: black;
     font-size: 18px;
 }
+.navlink:hover{
+  color: black;
+}
 
 /* Responsive design */
 @media (max-width: 768px) {
