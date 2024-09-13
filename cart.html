@@ -356,6 +356,39 @@
     document.querySelector('.total td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
     document.querySelector('.total tr:last-child td:nth-child(2)').innerText = `R${subtotal.toFixed(2)}`;
   }
+  // Event listener for quantity change
+      document.querySelectorAll('input[type="number"]').forEach(input => {
+        input.addEventListener('change', function() {
+          const row = this.closest('tr');
+          updateSubtotal(row);
+          updateCartTotal();
+        });
+      });
+    // Event listener for trash icon click
+      document.querySelectorAll('.fa-trash').forEach(icon => {
+        icon.addEventListener('click', function(event) {
+          event.preventDefault();
+          const row = icon.closest('tr');
+          row.remove();
+          updateCartTotal();
+        });
+      });
+    // Event listener for coupon application
+      document.getElementById('applyCoupon').addEventListener('click', function() {
+        const couponCode = document.getElementById('couponCode').value.trim();
+        // Dummy coupon logic
+        if (couponCode === 'DISCOUNT10') {
+          const discount = 0.10; // 10% discount
+          const subtotal = parseFloat(document.getElementById('cartSubtotal').innerText.replace('R', ''));
+          const discountedTotal = subtotal * (1 - discount);
+          document.getElementById('cartTotal').innerText = `R${discountedTotal.toFixed(2)}`;
+        } else {
+          alert('Invalid coupon code.');
+        }
+      });
+
+      // Initial update for cart total
+      updateCartTotal();
 </script>
 
 </html>
